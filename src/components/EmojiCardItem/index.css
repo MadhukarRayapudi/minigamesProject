@@ -1,0 +1,31 @@
+.each-emoji-item {
+  border: 3px solid #ffffff30;
+  background: #ffffff33;
+  padding: 16px;
+  margin: 12px;
+  list-style-type: none;
+  border-radius: 8px;
+}
+
+.each-emoji-button {
+  background-color: transparent;
+  border: 0;
+}
+
+.emoji {
+  width: 100px;
+  height: 100px;
+  top: 268px;
+  left: 243px;
+  gap: 0px;
+  opacity: 0px;
+}
+
+@media (max-width: 576px) {
+  .emoji {
+    width: 40px;
+    height: 40px;
+    top: 164px;
+    left: 52px;
+  }
+}

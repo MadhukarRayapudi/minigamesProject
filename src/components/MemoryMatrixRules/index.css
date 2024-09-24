@@ -1,0 +1,248 @@
+@media (max-width: 576px) {
+  .memory-matrix-rules-page {
+    width: 100%;
+    min-height: 100vh;
+    top: 7541.25px;
+    left: -29115.5px;
+    gap: 0px;
+    opacity: 0px;
+    background: #1a202c;
+    padding: 22px;
+    padding-top: 32px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .rules-page-bck-btn {
+    width: Hug (68px) px;
+    height: Hug (24px) px;
+    top: 32px;
+    left: 24px;
+    gap: 8px;
+    opacity: 0px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: 0;
+    font-family: Bree Serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+  }
+
+  .back-icon {
+    width: 24px;
+    height: 24px;
+    padding: 5px 4px 5px 4px;
+    gap: 0px;
+    opacity: 0px;
+  }
+
+  .memory-game-heading {
+    width: 224px;
+    height: 43px;
+    top: 80px;
+    left: 68px;
+    gap: 0px;
+    opacity: 0px;
+    font-family: Bree Serif;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 43.46px;
+    color: #ffffff;
+    align-self: center;
+  }
+
+  .memory-matrix-image {
+    width: 312px;
+    height: 233px;
+    top: 155px;
+    left: 24px;
+    gap: 0px;
+    opacity: 0px;
+    align-self: center;
+  }
+
+  .memory-matrix-rules-heading {
+    width: 59px;
+    height: 32px;
+    top: 436px;
+    left: 150px;
+    gap: 0px;
+    opacity: 0px;
+    font-family: Bree Serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+    text-align: left;
+    color: #ffffff;
+    align-self: center;
+    padding-top: 16px;
+  }
+
+  .memory-matrix-rules-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .memory-matrix-rule {
+    /* height: 144px; */
+    margin-top: 10px;
+    top: 485px;
+    left: 24px;
+    gap: 0px;
+    opacity: 0px;
+    font-family: Bree Serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #ffffff;
+  }
+
+  .start-md-btn {
+    display: none;
+  }
+
+  .start-sm-btn {
+    width: Hug (104px) px;
+    height: Hug (32px) px;
+    padding: 8px 16px 8px 16px;
+    gap: 8px;
+    border-radius: 8px;
+    opacity: 0px;
+    background: #467aff;
+    color: #ffffff;
+    align-self: center;
+    border: 0;
+    margin-top: 14px;
+  }
+}
+
+@media (min-width: 577px) {
+  .memory-matrix-rules-page {
+    width: 100%;
+    min-height: 100vh;
+    gap: 0px;
+    opacity: 0px;
+    background: #1a202c;
+    padding-top: 44px;
+    padding-left: 60px;
+    padding-right: 60px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .rules-page-bck-btn {
+    width: Hug (76px) px;
+    height: Hug (32px) px;
+    top: 64px;
+    left: 165px;
+    gap: 8px;
+    opacity: 0px;
+    font-family: Bree Serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 32px;
+    text-align: left;
+    background-color: transparent;
+    border: 0;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+  }
+
+  .back-icon {
+    width: 24px;
+    height: 24px;
+    padding: 5px 4px 5px 4px;
+    gap: 0px;
+    opacity: 0px;
+  }
+
+  .memory-game-heading {
+    width: 336px;
+    height: 65px;
+    top: 128px;
+    left: 552px;
+    gap: 0px;
+    opacity: 0px;
+    font-family: Bree Serif;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 65.18px;
+    text-align: left;
+    color: #ffffff;
+    align-self: center;
+  }
+
+  .memory-matrix-image {
+    width: 484px;
+    height: 361px;
+    top: 257px;
+    left: 478px;
+    gap: 0px;
+    opacity: 0px;
+    align-self: center;
+  }
+
+  .memory-matrix-rules-heading {
+    width: 78px;
+    height: 48px;
+    top: 682px;
+    left: 150px;
+    gap: 0px;
+    opacity: 0px;
+    font-family: Bree Serif;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 48px;
+    color: #ffffff;
+  }
+
+  .memory-matrix-rules-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .rules-half-container {
+    width: 45%;
+  }
+
+  .memory-matrix-rule {
+    top: 762px;
+    left: 150px;
+    gap: 0px;
+    opacity: 0px;
+    font-family: Bree Serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 32px;
+    text-align: left;
+    padding-top: 20px;
+    color: #ffffff;
+  }
+
+  .start-md-btn {
+    width: Hug (132px) px;
+    height: Hug (48px) px;
+    padding: 12px 24px 12px 24px;
+    gap: 8px;
+    border-radius: 12px;
+    opacity: 0px;
+    font-family: bree serif;
+    color: #ffffff;
+    background: #467aff;
+    border: 0;
+    margin-top: 36px;
+  }
+
+  .start-sm-btn {
+    display: none;
+  }
+}

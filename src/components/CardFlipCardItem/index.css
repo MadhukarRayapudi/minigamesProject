@@ -1,0 +1,60 @@
+@media (max-width: 576px) {
+  .eachCard {
+    width: 66px;
+    height: 66px;
+    top: 240px;
+    left: 36px;
+    gap: 0px;
+    opacity: 0px;
+    border-radius: 6px;
+    background: #a7f3d080;
+    list-style-type: none;
+    margin: 6px;
+  }
+
+  .eachCardBtn {
+    background-color: transparent;
+    border: 0;
+  }
+
+  .eachCardImage {
+    width: 54px;
+    height: 48px;
+    top: 249px;
+    left: 116px;
+    gap: 0px;
+    opacity: 0px;
+  }
+}
+
+@media (min-width: 577px) {
+  .eachCard {
+    width: 140px;
+    height: 140px;
+    top: 376px;
+    left: 288px;
+    gap: 0px;
+    border-radius: 16px;
+    border: 3px 0px 0px 0px;
+    opacity: 0px;
+    background: #a7f3d080;
+    list-style-type: none;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .eachCardBtn {
+    background-color: transparent;
+    border: 0;
+    width: 100%;
+  }
+
+  .eachCardImage {
+    width: 100px;
+    height: 100px;
+    gap: 0px;
+    opacity: 0px;
+  }
+}

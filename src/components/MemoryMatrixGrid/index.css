@@ -1,0 +1,30 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+  grid-gap: 2px;
+  width: fit-content;
+  margin: auto;
+  padding: 20px;
+}
+
+.grid-cell {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.grid-cell.highlighted {
+  background-color: blue; /* Highlighted color */
+}
+
+.grid-cell.correct {
+  background-color: blue; /* Correctly guessed color */
+}
+
+.grid-cell.incorrect {
+  background-color: red; /* Incorrectly guessed color */
+}

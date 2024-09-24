@@ -1,0 +1,167 @@
+@media (max-width: 576px) {
+  .card-flip-rules-page-bg {
+    background: #14332e;
+    min-height: 100vh;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .back-btn {
+    background-color: transparent;
+    border: 0;
+    width: Hug (68px) px;
+    height: Hug (24px) px;
+    top: 32px;
+    left: 24px;
+    gap: 8px;
+    opacity: 0px;
+    font-family: Bree Serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    align-self: flex-start;
+    margin-bottom: 18px;
+  }
+
+  .rules-heading {
+    font-family: Bree Serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+    text-align: left;
+    color: #ffffff;
+  }
+
+  .flip-card-rules {
+    font-family: Bree Serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    color: #ffffff;
+    margin-bottom: 16px;
+  }
+
+  .start-playing-btn {
+    width: Hug (104px) px;
+    height: Hug (32px) px;
+    padding: 8px 16px 8px 16px;
+    gap: 8px;
+    border-radius: 8px;
+    opacity: 0px;
+    background-color: #ffffff;
+    font-family: bree serif;
+    color: #223a5f;
+    border: 0;
+  }
+
+  .rules-page-img {
+    width: 80%;
+    height: 178px;
+    top: 80px;
+    left: 24px;
+    gap: 0px;
+    opacity: 0px;
+  }
+}
+
+@media (min-width: 577px) {
+  .card-flip-rules-page-bg {
+    background: #14332e;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 26px;
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+
+  .back-btn {
+    align-self: flex-start;
+    width: Hug (76px) px;
+    height: Hug (32px) px;
+    top: 64px;
+    left: 165px;
+    gap: 8px;
+    opacity: 0px;
+    font-family: Bree Serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+    text-align: left;
+    color: #ffffff;
+    background-color: transparent;
+    border: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .rules-page-img {
+    width: 60%;
+    height: 462px;
+    top: 128px;
+    left: 317px;
+    gap: 0px;
+    opacity: 0px;
+  }
+
+  .rules-heading {
+    width: 78px;
+    height: 48px;
+    top: 638px;
+    left: 150px;
+    gap: 0px;
+    opacity: 0px;
+    font-family: Bree Serif;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 48px;
+    text-align: left;
+    color: #ffffff;
+    align-self: flex-start;
+    margin-left: 26px;
+  }
+
+  .card-flip-rules-container {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .half-rules-container {
+    width: 40%;
+  }
+
+  .flip-card-rules {
+    font-family: Bree Serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 32px;
+    text-align: left;
+    color: #ffffff;
+  }
+
+  .start-playing-btn {
+    width: Hug (132px) px;
+    height: Hug (48px) px;
+    padding: 12px 24px 12px 24px;
+    gap: 8px;
+    border-radius: 12px;
+    border: 0;
+    opacity: 0px;
+    font-family: Bree Serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    color: #223a5f;
+    align-self: flex-start;
+    margin-left: 26px;
+  }
+}

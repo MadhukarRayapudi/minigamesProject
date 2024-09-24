@@ -1,0 +1,78 @@
+.home-screen-bg {
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(117.3deg, #834d9b 2.24%, #d04ed6 173.83%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+@media (min-width: 577px) {
+  .home-screen-bg {
+    padding: 12px;
+  }
+}
+
+.main-heading {
+  width: 151px;
+  height: 56px;
+  color: #ffffff;
+}
+
+.home-page-games-container {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media (min-width: 577px) {
+  .home-page-games-container {
+    width: 70%;
+  }
+}
+
+.home-page-each-game-link-container {
+  background-color: #ffffff;
+  width: 100%;
+  margin: 12px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  padding: 12px;
+}
+
+@media (min-width: 577px) {
+  .home-page-each-game-link-container {
+    width: 40%;
+  }
+}
+
+.game-image {
+  height: 200px;
+  width: 200px;
+}
+
+.memory-matrix-game-image {
+  height: 200px;
+  width: 250px;
+}
+
+.flip-card-game-image {
+  height: 200px;
+  width: 90%;
+}
+
+.game-name {
+  font-family: 'Bree Serif', serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: center;
+  color: #334155;
+}

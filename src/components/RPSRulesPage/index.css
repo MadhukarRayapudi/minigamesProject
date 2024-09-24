@@ -1,0 +1,244 @@
+/* Ensuring html and body take full width */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 576px) {
+  .rps-rules-page-container {
+    background-color: #223a5f;
+    min-height: 100vh;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .rps-rules-page-bck-btn {
+    font-family: Bree Serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    color: #ffffff;
+    display: flex;
+    width: 68px; /* Corrected width */
+    height: 24px; /* Corrected height */
+    gap: 8px;
+    opacity: 0px;
+    background-color: transparent;
+    border: 0;
+    align-items: center;
+  }
+
+  .rps-heading {
+    width: 240px;
+    height: 32px;
+    gap: 0px;
+    opacity: 0px;
+    font-family: Bree Serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+    text-align: left;
+    align-self: center;
+    color: #ffffff;
+  }
+
+  .rps-rules-page-img {
+    width: 227px;
+    height: 202px;
+    gap: 0px;
+    opacity: 0px;
+    align-self: center;
+    margin-bottom: 20px;
+  }
+
+  .rps-rules-heading {
+    width: 59px;
+    height: 32px;
+    gap: 0px;
+    opacity: 0px;
+    font-family: Bree Serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+    text-align: left;
+    color: #ffffff;
+    align-self: center;
+  }
+
+  .rps-rules-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .rps-rule {
+    width: 100%;
+    gap: 0px;
+    opacity: 0px;
+    font-family: Bree Serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    color: #ffffff;
+    margin-bottom: 20px;
+  }
+
+  .span-element-for-md-devices {
+    display: none;
+  }
+
+  .rps-rules-container-for-md-above-devices {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .rps-start-playing-btn {
+    width: Hug (104px) px;
+    height: Hug (32px) px;
+    top: 1450px;
+    left: 128px;
+    gap: 0px;
+    opacity: 0px;
+    font-family: Bree Serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    text-align: left;
+    align-self: center;
+    border: 0;
+    padding: 10px;
+    border-radius: 10px;
+  }
+}
+
+@media (min-width: 577px) {
+  .rps-rules-page-container {
+    width: 100%;
+    min-height: 100vh;
+    gap: 0px;
+    background-color: #223a5f;
+    padding: 48px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .rps-rules-page-bck-btn {
+    width: 76px; /* Corrected width */
+    height: 32px; /* Corrected height */
+    gap: 8px;
+    opacity: 0px;
+    background-color: transparent;
+    border: 0;
+    font-family: Bree Serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 32px;
+    text-align: left;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+  }
+
+  .rps-heading {
+    width: 480px;
+    height: 64px;
+    gap: 0px;
+    opacity: 0px;
+    font-family: Bree Serif;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 64px;
+    text-align: left;
+    align-self: center;
+    color: #ffffff;
+  }
+
+  .rps-rules-page-img {
+    width: 266px;
+    height: 237px;
+    gap: 0px;
+    opacity: 0px;
+    align-self: center;
+    margin-bottom: 22px;
+  }
+
+  .rps-rules-heading {
+    width: 78px;
+    height: 48px;
+    gap: 0px;
+    opacity: 0px;
+    font-family: Bree Serif;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 48px;
+    text-align: left;
+    color: #ffffff;
+  }
+
+  .rps-rules-container {
+    width: 100%;
+  }
+
+  .rps-rule {
+    width: 100%;
+    gap: 0px;
+    opacity: 0px;
+    font-family: Bree Serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 32px;
+    text-align: left;
+    color: #ffffff;
+  }
+
+  .span-element-for-sm-devices {
+    display: none;
+  }
+
+  .span-element-for-md-devices {
+    color: yellow;
+  }
+
+  .rps-rules-container-for-md-above-devices {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+  }
+
+  .rps-six-rules-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .rps-six-rules-container-frst {
+    margin-right: 56px;
+  }
+
+  .rps-start-playing-btn {
+    width: Hug (132px) px;
+    height: Hug (48px) px;
+    top: 1157px;
+    left: 150px;
+    gap: 0px;
+    opacity: 0px;
+    font-family: Bree Serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    align-self: flex-start;
+    border: 0;
+    border-radius: 10px;
+    padding: 14px;
+  }
+}

@@ -1,0 +1,148 @@
+@media (max-width: 576px) {
+  .card-flip-game-bg {
+    background-image: url('https://res.cloudinary.com/dqv0mp6k8/image/upload/v1726823943/44350_1_d1z2he.png');
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px;
+  }
+
+  .card-flip-memory-game-heading {
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    text-align: center;
+    width: 264px;
+    height: 32px;
+    top: 88px;
+    left: 48px;
+    gap: 0px;
+    opacity: 0px;
+    color: #ffffff;
+  }
+
+  .timer-and-paragraph-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .paragraph {
+    font-family: Roboto;
+    font-size: 16px;
+    color: #ffffff;
+  }
+
+  .timer {
+    display: none;
+  }
+
+  .paragraphs-container {
+    display: none;
+  }
+
+  .paragraph-md {
+    display: none;
+  }
+
+  .paragraphs-container-sm {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 577px) {
+  .card-flip-game-bg {
+    background-image: url('https://res.cloudinary.com/dqv0mp6k8/image/upload/v1726824556/44350_1_1_ubvkk0.png');
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 34px;
+  }
+
+  .half-rules-container {
+    width: 40%;
+  }
+
+  .fc-rules-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 14px;
+  }
+
+  .card-flip-memory-game-heading {
+    font-family: Roboto;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 64px;
+    text-align: center;
+    color: #ffffff;
+  }
+
+  .timer-and-paragraph-container {
+    display: none;
+  }
+
+  .timer {
+    font-family: Roboto;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+    color: #ffffff;
+    align-self: center;
+  }
+
+  .paragraphs-container {
+    width: 74%;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(128, 128, 128, 0.7);
+    border-radius: 10px;
+    padding: 12px;
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  .paragraph-md {
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 32px;
+    color: #ffffff;
+  }
+
+  .paragraphs-container-sm {
+    display: none;
+  }
+
+  .cardsContainer {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.back-and-rules-btn-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cardsContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: #154315;
+  width: 100%;
+  border-radius: 10px;
+  border: 6px solid #ffffff;
+  padding: 12px;
+}
