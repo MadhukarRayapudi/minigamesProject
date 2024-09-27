@@ -2,9 +2,9 @@ import {Component} from 'react'
 
 import {FaArrowLeft} from 'react-icons/fa'
 
-import {CgClose} from 'react-icons/cg'
+// import {CgClose} from 'react-icons/cg'
 
-import Popup from 'reactjs-popup'
+// import Popup from 'reactjs-popup'
 
 import Navbar from '../Navbar'
 
@@ -13,6 +13,57 @@ import EmojisCardsContainer from '../EmojisCardsContainer'
 import EmojiGameContext from '../EmojiGameContext'
 
 import './index.css'
+
+// <Popup
+//                   modal
+//                   trigger={
+//                     <button className="rules-btn" type="button">
+//                       Rules
+//                     </button>
+//                   }
+//                 >
+//                   {close => (
+//                     <>
+//                       <ul className="popup-container">
+//                         <button
+//                           className="close-button"
+//                           type="button"
+//                           data-testid="close"
+//                           onClick={() => close()}
+//                         >
+//                           <CgClose />
+//                         </button>
+//                         <h1 className="popup-rules-heading"> Rules </h1>
+//                         <li className="popup-rules">
+//                           User should be able to see the list of Emojis
+//                         </li>
+//                         <li className="popup-rules">
+//                           When the user clicks any one of the Emoji for the
+//                           first time, then the count of the score should be
+//                           incremented by 1 and the List of emoji cards should be
+//                           shuffled.
+//                         </li>
+//                         <li className="popup-rules">
+//                           This process should be repeated every time the user
+//                           clicks on an emoji card
+//                         </li>
+//                         <li className="popup-rules">
+//                           When the user clicks on all Emoji cards without
+//                           clicking any of it twice, then the user will win the
+//                           game
+//                         </li>
+//                         <li className="popup-rules">
+//                           When the user clicks on the same Emoji for the second
+//                           time, then the user will lose the game.
+//                         </li>
+//                         <li className="popup-rules">
+//                           Once the game is over, the user will be redirected to
+//                           the results page.
+//                         </li>
+//                       </ul>
+//                     </>
+//                   )}
+//                 </Popup>
 
 const emojisList = [
   {
@@ -160,56 +211,6 @@ class EmojiGamePage extends Component {
                   <FaArrowLeft className="back-icon" />
                   Back
                 </button>
-                <Popup
-                  modal
-                  trigger={
-                    <button className="rules-btn" type="button">
-                      Rules
-                    </button>
-                  }
-                >
-                  {close => (
-                    <>
-                      <ul className="popup-container">
-                        <button
-                          className="close-button"
-                          type="button"
-                          data-testid="close"
-                          onClick={() => close()}
-                        >
-                          <CgClose />
-                        </button>
-                        <h1 className="popup-rules-heading"> Rules </h1>
-                        <li className="popup-rules">
-                          User should be able to see the list of Emojis
-                        </li>
-                        <li className="popup-rules">
-                          When the user clicks any one of the Emoji for the
-                          first time, then the count of the score should be
-                          incremented by 1 and the List of emoji cards should be
-                          shuffled.
-                        </li>
-                        <li className="popup-rules">
-                          This process should be repeated every time the user
-                          clicks on an emoji card
-                        </li>
-                        <li className="popup-rules">
-                          When the user clicks on all Emoji cards without
-                          clicking any of it twice, then the user will win the
-                          game
-                        </li>
-                        <li className="popup-rules">
-                          When the user clicks on the same Emoji for the second
-                          time, then the user will lose the game.
-                        </li>
-                        <li className="popup-rules">
-                          Once the game is over, the user will be redirected to
-                          the results page.
-                        </li>
-                      </ul>
-                    </>
-                  )}
-                </Popup>
               </div>
               <EmojisCardsContainer />
             </div>

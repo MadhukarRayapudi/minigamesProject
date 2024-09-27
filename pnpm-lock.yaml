@@ -12,9 +12,6 @@ dependencies:
   react-icons: 4.2.0_react@17.0.1
   react-modal: 3.14.3_react-dom@17.0.1+react@17.0.1
   react-router-dom: 5.3.0_react@17.0.1
-  reactjs-popup: 2.0.6_react-dom@17.0.1+react@17.0.1
-  styled-components: 6.1.12_react-dom@17.0.1+react@17.0.1
-  uuid: 10.0.0
 devDependencies:
   eslint-config-airbnb: 18.2.1
   eslint-config-prettier: 8.1.0
@@ -1571,20 +1568,6 @@ packages:
     dev: true
     resolution:
       integrity: sha512-ij4wRiunFfaJxjB0BdrYHIH8FxBJpOwNPhhAcunlmPdXudL1WQV1qoP9un6JsEBAgQH+7UXyyjh0g7jTxXK6tg==
-  /@emotion/is-prop-valid/1.2.2:
-    dependencies:
-      '@emotion/memoize': 0.8.1
-    dev: false
-    resolution:
-      integrity: sha512-uNsoYd37AFmaCdXlg6EYD1KaPOaRWRByMCYzbKUX4+hhMfrxdVSelShywL4JVaAeM/eHUOSprYBQls+/neX3pw==
-  /@emotion/memoize/0.8.1:
-    dev: false
-    resolution:
-      integrity: sha512-W2P2c/VRW1/1tLox0mVUalvnWXxavmv/Oum2aPsRcoDJuob75FC3Y8FbpfLwUegRcxINtGUMPq0tFCvYNTBXNA==
-  /@emotion/unitless/0.8.1:
-    dev: false
-    resolution:
-      integrity: sha512-KOEGMu6dmJZtpadb476IsZBclKvILjopjUii3V+7MnXIQCYh8W3NgNcgwo21n9LXZX6EDIKvqfjYxXebDwxKmQ==
   /@eslint/eslintrc/0.4.2:
     dependencies:
       ajv: 6.12.6
@@ -2284,10 +2267,6 @@ packages:
     dev: true
     resolution:
       integrity: sha512-Hl219/BT5fLAaz6NDkSuhzasy49dwQS/DSdu4MdggFB8zcXv7vflBI3xp7FEmkmdDkBUI2bPUNeMttp2knYdxw==
-  /@types/stylis/4.2.5:
-    dev: false
-    resolution:
-      integrity: sha512-1Xve+NMN7FWjY14vLoY5tL3BVEQ/n42YLwaqJIPYhotZ9uBHt87VceMwWQpzmdEt2TNXIorIFG+YeCUUW7RInw==
   /@types/tapable/1.0.8:
     dev: true
     resolution:
@@ -3699,10 +3678,6 @@ packages:
       node: '>=10'
     resolution:
       integrity: sha512-c7wVvbw3f37nuobQNtgsgG9POC9qMbNuMQmTCqZv23b6MIz0fcYpBiOlv9gEN/hdLdnZTDQhg6e9Dq5M1vKvfg==
-  /camelize/1.0.1:
-    dev: false
-    resolution:
-      integrity: sha512-dU+Tx2fsypxTgtLoE36npi3UqcjSSMNYfkqgmoEhtZrraP5VWq0K7FkWVTYa8eMPtnU/G2txVsfdCJTn9uzpuQ==
   /caniuse-api/3.0.0:
     dependencies:
       browserslist: 4.16.6
@@ -4287,12 +4262,6 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-LHz35Hr83dnFeipc7oqFDmsjHdljj3TQtxGGiNWSOsTLIAubSm4TEz8qCaKFpk7idaQ1GfWscF4E6mgpBysA1w==
-  /css-color-keywords/1.0.0:
-    dev: false
-    engines:
-      node: '>=4'
-    resolution:
-      integrity: sha512-FyyrDHZKEjXDpNJYvVsV960FiqQyXc/LlYmsxl2BcdMb2WPx0OGRVgTg55rPSyLSNMqP52R9r8geSp7apN3Ofg==
   /css-color-names/0.0.4:
     dev: true
     resolution:
@@ -4380,14 +4349,6 @@ packages:
     dev: false
     resolution:
       integrity: sha512-nwoRF1rvRRnnCqqY7updORDsuqKzqYJ28+oSMaJMMgOauh3fvwHqMS7EZpIPqK8GL+g9mKxF1vP/ZjSeNjEVHg==
-  /css-to-react-native/3.2.0:
-    dependencies:
-      camelize: 1.0.1
-      css-color-keywords: 1.0.0
-      postcss-value-parser: 4.2.0
-    dev: false
-    resolution:
-      integrity: sha512-e8RKaLXMOFii+02mOlqwjbD00KSEKqblnpO9e++1aXS1fPQOpS1YoqdVHBqPjHNoxeF2mimzVqawm2KCbEdtHQ==
   /css-tree/1.0.0-alpha.37:
     dependencies:
       mdn-data: 2.0.4
@@ -4561,10 +4522,6 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-AZL67abkUzIuvcHqk7c09cezpGNcxUxU4Ioi/05xHk4DQeTkWmGYftIE6ctU6AEt+Gn4n1lDStOtj7FKycP71A==
-  /csstype/3.1.3:
-    dev: false
-    resolution:
-      integrity: sha512-M1uQkMl8rQK/szD0LNhtqxIPLpimGm8sOBwU7lLnCpSbTyY3yeU1Vc7l4KT5zT4s/yOxHH5O7tIuuLOCnLADRw==
   /cyclist/1.0.1:
     dev: true
     resolution:
@@ -8865,13 +8822,6 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-FiB0kzdP0FFVGDKlRLEQ1BgDzU87dy5NnzjeW9YZNt+/c3+q82EQDUwniSAUxp/F0gFNI1ZhKU1FqYsMuqZVnw==
-  /nanoid/3.3.7:
-    dev: false
-    engines:
-      node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1
-    hasBin: true
-    resolution:
-      integrity: sha512-eSRppjcPIatRIMC1U6UngP8XFcz8MQWGQdt1MTBQ7NaAmvXDfvNxbvWV3x2y6CdEUciCSsDHDQZbhYaB8QEo2g==
   /nanomatch/1.2.13:
     dependencies:
       arr-diff: 4.0.0
@@ -9590,10 +9540,6 @@ packages:
   /performance-now/2.1.0:
     resolution:
       integrity: sha512-7EAHlyLHI56VEIdK57uwHdHKIaAGbnXPiw0yWbarQZOKaKpvUIgW0jWRVLiatnM+XXlSwsanIBH/hzGMJulMow==
-  /picocolors/1.0.1:
-    dev: false
-    resolution:
-      integrity: sha512-anP1Z8qwhkbmu7MFP5iTt+wQKXgwzf7zTyGlcdzabySa9vd0Xt392U0rVmz9poOaBj0uHJKyyo9/upk0HrEQew==
   /picomatch/2.3.0:
     dev: true
     engines:
@@ -10412,10 +10358,6 @@ packages:
     dev: true
     resolution:
       integrity: sha512-97DXOFbQJhk71ne5/Mt6cOu6yxsSfM0QGQyl0L25Gca4yGWEGJaig7l7gbCX623VqTBNGLRLaVUCnNkcedlRSQ==
-  /postcss-value-parser/4.2.0:
-    dev: false
-    resolution:
-      integrity: sha512-1NNCs6uurfkVbeXG4S8JFT9t19m45ICnif8zWLd5oPSZ50QnwMfK+H3jv408d4jw/7Bttv5axS5IiHoLaVNHeQ==
   /postcss-values-parser/2.0.1:
     dependencies:
       flatten: 1.0.3
@@ -10446,16 +10388,6 @@ packages:
       node: ^10 || ^12 || >=14
     resolution:
       integrity: sha512-NxTuJocUhYGsMiMFHDUkmjSKT3EdH4/WbGF6GCi1NDGk+vbcUTun4fpbOqaPtD8IIsztA2ilZm2DhYCuyN58gA==
-  /postcss/8.4.38:
-    dependencies:
-      nanoid: 3.3.7
-      picocolors: 1.0.1
-      source-map-js: 1.2.0
-    dev: false
-    engines:
-      node: ^10 || ^12 || >=14
-    resolution:
-      integrity: sha512-Wglpdk03BSfXkHoQa3b/oulrotAkwrlLDRSOb9D0bN86FdRyE9lppSp33aHNPgBa0JKCoB+drFLZkQoRRYae5A==
   /prelude-ls/1.1.2:
     dev: true
     engines:
@@ -10966,18 +10898,6 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha512-lG9c9UuMHdcAexXtigOZLX8exLWkW0Ku29qPRU8uhF2R9BN96dLCt0psvzPLlHc5OWkgymP3qwTRgbnw5BKx3w==
-  /reactjs-popup/2.0.6_react-dom@17.0.1+react@17.0.1:
-    dependencies:
-      react: 17.0.1
-      react-dom: 17.0.1_react@17.0.1
-    dev: false
-    engines:
-      node: '>=10'
-    peerDependencies:
-      react: '>=16'
-      react-dom: '>=16'
-    resolution:
-      integrity: sha512-A+tt+x9wdgZiZjv0e2WzYLD3IfFwJALaRaqwrCSXGjo0iQdsry/EtBEbQXRSmQs7cHmOi5eytCiSlOm8k4C+dg==
   /read-pkg-up/3.0.0:
     dependencies:
       find-up: 2.1.0
@@ -11735,10 +11655,6 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-QMEp5B7cftE7APOjk5Y6xgrbWu+WkLVQwk8JNjZ8nKRciZaByEW6MubieAiToS7+dwvrjGhH8jRXz3MVd0AYqQ==
-  /shallowequal/1.1.0:
-    dev: false
-    resolution:
-      integrity: sha512-y0m1JoUZSlPAjXVtPPW70aZWfIL/dSP7AFkRnniLCrK/8MDKog3TySTBmckD+RObVxH0v4Tox67+F14PdED2oQ==
   /shebang-command/1.2.0:
     dependencies:
       shebang-regex: 1.0.0
@@ -11893,12 +11809,6 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha512-/3GptzWzu0+0MBQFrDKzw/DvvMTUORvgY6k6jd/VS6iCR4RDTKWH6v6WPwQoUO8667uQEf9Oe38DxAYWY5F/Ug==
-  /source-map-js/1.2.0:
-    dev: false
-    engines:
-      node: '>=0.10.0'
-    resolution:
-      integrity: sha512-itJW8lvSA0TXEphiRoawsCksnlf8SyvmFzIhltqAHluXd88pkCd+cXJVHTDwdCr0IzwptSm035IHQktUu1QUMg==
   /source-map-resolve/0.5.3:
     dependencies:
       atob: 2.1.2
@@ -12293,27 +12203,6 @@ packages:
       webpack: ^4.0.0 || ^5.0.0
     resolution:
       integrity: sha512-V7TCORko8rs9rIqkSrlMfkqA63DfoGBBJmK1kKGCcSi+BWb4cqz0SRsnp4l6rU5iwOEd0/2ePv68SV22VXon4Q==
-  /styled-components/6.1.12_react-dom@17.0.1+react@17.0.1:
-    dependencies:
-      '@emotion/is-prop-valid': 1.2.2
-      '@emotion/unitless': 0.8.1
-      '@types/stylis': 4.2.5
-      css-to-react-native: 3.2.0
-      csstype: 3.1.3
-      postcss: 8.4.38
-      react: 17.0.1
-      react-dom: 17.0.1_react@17.0.1
-      shallowequal: 1.1.0
-      stylis: 4.3.2
-      tslib: 2.6.2
-    dev: false
-    engines:
-      node: '>= 16'
-    peerDependencies:
-      react: '>= 16.8.0'
-      react-dom: '>= 16.8.0'
-    resolution:
-      integrity: sha512-n/O4PzRPhbYI0k1vKKayfti3C/IGcPf+DqcrOB7O/ab9x4u/zjqraneT5N45+sIe87cxrCApXM8Bna7NYxwoTA==
   /stylehacks/4.0.3:
     dependencies:
       browserslist: 4.16.6
@@ -12324,10 +12213,6 @@ packages:
       node: '>=6.9.0'
     resolution:
       integrity: sha512-7GlLk9JwlElY4Y6a/rmbH2MhVlTyVmiJd1PfTCqFaIBEGMYNsrO/v3SeGTdhBThLg4Z+NbOk/qFMwCa+J+3p/g==
-  /stylis/4.3.2:
-    dev: false
-    resolution:
-      integrity: sha512-bhtUjWd/z6ltJiQwg0dUfxEJ+W+jdqQd8TbWLWyeIJHlnsqmGLRFFd8e5mA0AZi/zx90smXRlN66YMTcaSFifg==
   /supports-color/5.5.0:
     dependencies:
       has-flag: 3.0.0
@@ -12664,10 +12549,6 @@ packages:
     dev: true
     resolution:
       integrity: sha512-N82ooyxVNm6h1riLCoyS9e3fuJ3AMG2zIZs2Gd1ATcSFjSA23Q0fzjjZeh0jbJvWVDZ0cJT8yaNNaaXHzueNjg==
-  /tslib/2.6.2:
-    dev: false
-    resolution:
-      integrity: sha512-AEYxH93jGFPn/a2iVAwW87VuUIkR1FVUKB77NwMF7nBTDkDrrT/Hpt/IrCJ0QXhW27jTBDcf5ZY7w6RiqTMw2Q==
   /tsutils/3.21.0:
     dependencies:
       tslib: 1.14.1
@@ -13015,11 +12896,6 @@ packages:
       node: '>= 0.4.0'
     resolution:
       integrity: sha1-n5VxD1CiZ5R7LMwSR0HBAoQn5xM=
-  /uuid/10.0.0:
-    dev: false
-    hasBin: true
-    resolution:
-      integrity: sha512-8XkAphELsDnEGrDxUOHB3RGvXz6TeuYSGEZBOjtTtPm2lwhGBjLgOzLHB63IUWfBpNucQjND6d3AOudO+H3RWQ==
   /uuid/3.4.0:
     deprecated: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
     dev: true
@@ -13682,6 +13558,3 @@ specifiers:
   react-modal: 3.14.3
   react-router-dom: 5.3.0
   react-scripts: 4.0.3
-  reactjs-popup: 2.0.6
-  styled-components: 6.1.12
-  uuid: 10.0.0

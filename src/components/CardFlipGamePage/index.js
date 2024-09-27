@@ -1,7 +1,6 @@
 import {Component} from 'react'
-import Popup from 'reactjs-popup'
-import {v4 as uuidv4} from 'uuid' // Import UUID for unique keys
-import {CgClose} from 'react-icons/cg'
+// import Popup from 'reactjs-popup'
+// import {CgClose} from 'react-icons/cg'
 import {BiArrowBack} from 'react-icons/bi'
 import CardFlipCardItem from '../CardFlipCardItem'
 import CardFlipResultPage from '../CardFlipResultPage'
@@ -80,9 +79,12 @@ class CardFlipGamePage extends Component {
   }
 
   startGame = () => {
-    // Generate unique IDs for each card
+    // Assign an index-based unique key to each card
     const shuffledCards = this.shuffleCards(
-      [...cardsData, ...cardsData].map(card => ({...card, id: uuidv4()})),
+      [...cardsData, ...cardsData].map((card, index) => ({
+        ...card,
+        id: `${card.name}-${index}`,
+      })),
     )
     this.setState({shuffledCards})
 
@@ -96,7 +98,6 @@ class CardFlipGamePage extends Component {
           return {time: 0}
         },
         () => {
-          // This callback ensures we check the updated state values
           const {time, score} = this.state
           if (time === 0 || score === 10) {
             this.resultPage()
@@ -107,7 +108,7 @@ class CardFlipGamePage extends Component {
   }
 
   shuffleCards = array => {
-    const copiedArray = [...array] // Copy the array instead of modifying it directly
+    const copiedArray = [...array]
     for (let i = copiedArray.length - 1; i > 0; i -= 1) {
       const j = Math.floor(Math.random() * (i + 1))
       ;[copiedArray[i], copiedArray[j]] = [copiedArray[j], copiedArray[i]]
@@ -118,16 +119,14 @@ class CardFlipGamePage extends Component {
   onCardClick = clickedCard => {
     const {flippedCards, matchedCards, disabled, score} = this.state
 
-    // Prevent clicking more than two cards at once
     if (flippedCards.length === 1 && flippedCards[0].id === clickedCard.id) {
-      return // I will not do anything here for now
+      return
     }
 
     if (
       flippedCards.length === 1 &&
       flippedCards[0].name === clickedCard.name
     ) {
-      // Cards match, keep them revealed
       this.setState(prevState => ({
         matchedCards: [...matchedCards, clickedCard.name],
         flippedCards: [],
@@ -137,7 +136,6 @@ class CardFlipGamePage extends Component {
       flippedCards.length === 1 &&
       flippedCards[0].name !== clickedCard.name
     ) {
-      // Cards do not match, flip them back after 2 seconds
       this.setState({
         flippedCards: [...flippedCards, clickedCard],
         disabled: true,
@@ -146,7 +144,6 @@ class CardFlipGamePage extends Component {
         this.setState({flippedCards: [], disabled: false})
       }, 2000)
     } else {
-      // First card click
       this.setState({flippedCards: [clickedCard]})
     }
 
@@ -167,24 +164,10 @@ class CardFlipGamePage extends Component {
     }
   }
 
-  // setFlipCount = () => {
-  //   const {numberOfClicks, disabled} = this.state
-
-  //   if (numberOfClicks === 1 && disabled === false) {
-  //     this.setState(prevState => ({
-  //       flipCount: prevState.flipCount + 1,
-  //       numberOfClicks: 0,
-  //     }))
-  //   } else {
-  //     this.setState(prevState => ({
-  //       numberOfClicks: prevState.numberOfClicks + 1,
-  //     }))
-  //   }
-  // }
-
   resultPage = () => {
     const {score, time, flipCount, lowestFlip} = this.state
     this.setState({showResultPage: true})
+    clearInterval(this.timer)
 
     if (score === 10 && time > 0) {
       this.setState({result: 'won'})
@@ -229,6 +212,9 @@ class CardFlipGamePage extends Component {
         {!showResultPage && (
           <div className="card-flip-game-bg">
             <div className="back-and-rules-btn-container">
+              <button className="rules-btn" type="button">
+                Rules
+              </button>
               <button
                 type="button"
                 className="back-btn"
@@ -236,33 +222,6 @@ class CardFlipGamePage extends Component {
               >
                 <BiArrowBack className="back-arrow" /> Back
               </button>
-              <Popup
-                modal
-                trigger={
-                  <button className="rules-btn" type="button">
-                    Rules
-                  </button>
-                }
-              >
-                {close => (
-                  <>
-                    <ul className="popup-container">
-                      <button
-                        className="close-button"
-                        type="button"
-                        data-testid="close"
-                        onClick={() => close()}
-                      >
-                        <CgClose />
-                      </button>
-                      <h1 className="popup-rules-heading">Rules</h1>
-                      <div className="fc-rules-container">
-                        {/* Game rules */}
-                      </div>
-                    </ul>
-                  </>
-                )}
-              </Popup>
             </div>
             <h1 className="card-flip-memory-game-heading">
               Card-Flip Memory Game
@@ -286,7 +245,7 @@ class CardFlipGamePage extends Component {
             <ul className="cardsContainer">
               {shuffledCards.map(eachCardData => (
                 <CardFlipCardItem
-                  key={eachCardData.id} // Use the unique ID for the key prop
+                  key={eachCardData.id} // Use the unique key
                   eachCardData={eachCardData}
                   isFlipped={
                     flippedCards.includes(eachCardData) ||

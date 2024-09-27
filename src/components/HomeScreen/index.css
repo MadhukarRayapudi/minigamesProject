@@ -6,7 +6,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px;
 }
 
 @media (min-width: 577px) {
@@ -47,9 +46,24 @@
   padding: 12px;
 }
 
+.home-page-each-game-card {
+  width: 100%;
+  list-style-type: none;
+  margin-left: -30px;
+  top: 118px;
+  left: 24px;
+}
+
 @media (min-width: 577px) {
   .home-page-each-game-link-container {
+    width: 100%;
+    height: 300px;
+  }
+
+  .home-page-each-game-card {
     width: 40%;
+    list-style-type: none;
+    margin: 12px;
   }
 }
 
@@ -75,4 +89,10 @@
   line-height: 32px;
   text-align: center;
   color: #334155;
+}
+
+.home-screen-games-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
 }

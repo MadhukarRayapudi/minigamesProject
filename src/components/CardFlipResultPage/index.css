@@ -11,6 +11,7 @@
     font-size: 24px;
     font-weight: 400;
     color: #4ade80;
+    margin-left: 60px;
   }
 
   .result-page-text {
@@ -57,6 +58,7 @@
     font-size: 48px;
     font-weight: 400;
     color: #4ade80;
+    margin-left: 120px;
   }
 
   .result-page-flip-count {
