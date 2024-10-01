@@ -53,6 +53,24 @@
     display: flex;
     justify-content: space-between;
   }
+
+  .game-page-rules-heading {
+    font-family: Bree Serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    color: #1e293b;
+  }
+
+  .each-rule {
+    color: #475569;
+    font-family: Bree Serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+  }
 }
 
 @media (min-width: 577px) {
@@ -127,6 +145,31 @@
     display: flex;
     flex-wrap: wrap;
   }
+
+  .game-page-rules-heading {
+    font-family: Bree Serif;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 48px;
+    text-align: left;
+    color: #334155;
+  }
+
+  .each-rule {
+    font-family: Bree Serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 32px;
+    text-align: left;
+    color: #475569;
+    margin-bottom: 10px;
+  }
+
+  .rules-unordered-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
 }
 
 .back-and-rules-btn-container {
@@ -145,4 +188,41 @@
   border-radius: 10px;
   border: 6px solid #ffffff;
   padding: 12px;
+}
+
+.rules-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75); /* Dark semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* This centers the modal vertically */
+  width: 100%;
+}
+
+.rules-modal {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 88%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  height: 90%;
+  overflow-y: auto;
+}
+
+.rules-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.close-modal-btn {
+  align-self: flex-end;
+}
+
+.close-modal-btn:hover {
+  background-color: #0056b3;
 }

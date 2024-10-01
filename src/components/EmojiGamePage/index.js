@@ -2,9 +2,9 @@ import {Component} from 'react'
 
 import {FaArrowLeft} from 'react-icons/fa'
 
-// import {CgClose} from 'react-icons/cg'
+import {CgClose} from 'react-icons/cg'
 
-// import Popup from 'reactjs-popup'
+import Modal from 'react-modal'
 
 import Navbar from '../Navbar'
 
@@ -34,32 +34,32 @@ import './index.css'
 //                           <CgClose />
 //                         </button>
 //                         <h1 className="popup-rules-heading"> Rules </h1>
-//                         <li className="popup-rules">
-//                           User should be able to see the list of Emojis
-//                         </li>
-//                         <li className="popup-rules">
-//                           When the user clicks any one of the Emoji for the
-//                           first time, then the count of the score should be
-//                           incremented by 1 and the List of emoji cards should be
-//                           shuffled.
-//                         </li>
-//                         <li className="popup-rules">
-//                           This process should be repeated every time the user
-//                           clicks on an emoji card
-//                         </li>
-//                         <li className="popup-rules">
-//                           When the user clicks on all Emoji cards without
-//                           clicking any of it twice, then the user will win the
-//                           game
-//                         </li>
-//                         <li className="popup-rules">
-//                           When the user clicks on the same Emoji for the second
-//                           time, then the user will lose the game.
-//                         </li>
-//                         <li className="popup-rules">
-//                           Once the game is over, the user will be redirected to
-//                           the results page.
-//                         </li>
+// <li className="popup-rules">
+//   User should be able to see the list of Emojis
+// </li>
+// <li className="popup-rules">
+//   When the user clicks any one of the Emoji for the
+//   first time, then the count of the score should be
+//   incremented by 1 and the List of emoji cards should be
+//   shuffled.
+// </li>
+// <li className="popup-rules">
+//   This process should be repeated every time the user
+//   clicks on an emoji card
+// </li>
+// <li className="popup-rules">
+//   When the user clicks on all Emoji cards without
+//   clicking any of it twice, then the user will win the
+//   game
+// </li>
+// <li className="popup-rules">
+//   When the user clicks on the same Emoji for the second
+//   time, then the user will lose the game.
+// </li>
+// <li className="popup-rules">
+//   Once the game is over, the user will be redirected to
+//   the results page.
+// </li>
 //                       </ul>
 //                     </>
 //                   )}
@@ -143,6 +143,7 @@ class EmojiGamePage extends Component {
     topScore: 0,
     clickedEmojiIds: [],
     gameCompleted: false,
+    isRulesModalOpen: false,
   }
 
   GoBackToRulesPageBtn = () => {
@@ -191,8 +192,16 @@ class EmojiGamePage extends Component {
     })
   }
 
+  openRulesModal = () => {
+    this.setState({isRulesModalOpen: true})
+  }
+
+  closeRulesModal = () => {
+    this.setState({isRulesModalOpen: false})
+  }
+
   render() {
-    const {score, topScore, gameCompleted} = this.state
+    const {score, topScore, gameCompleted, isRulesModalOpen} = this.state
     const shuffledArray = this.getShuffledArray(emojisList)
     return (
       <EmojiGameContext.Provider
@@ -210,6 +219,13 @@ class EmojiGamePage extends Component {
                 >
                   <FaArrowLeft className="back-icon" />
                   Back
+                </button>
+                <button
+                  className="rules-btn"
+                  type="button"
+                  onClick={this.openRulesModal}
+                >
+                  Rules
                 </button>
               </div>
               <EmojisCardsContainer />
@@ -269,6 +285,48 @@ class EmojiGamePage extends Component {
             </div>
           </>
         )}
+        <Modal
+          isOpen={isRulesModalOpen}
+          onRequestClose={this.closeRulesModal}
+          className="rules-modal"
+          overlayClassName="rules-modal-overlay"
+          contentLabel="Rules Modal"
+        >
+          <div className="rules-content">
+            <CgClose
+              type="button"
+              onClick={this.closeRulesModal}
+              className="close-modal-btn"
+            />
+            <h2 className="game-page-rules-heading">Game Rules</h2>
+            <ul className="rules-unordered-container-emoji-game">
+              <li className="popup-rules">
+                User should be able to see the list of Emojis
+              </li>
+              <li className="popup-rules">
+                When the user clicks any one of the Emoji for the first time,
+                then the count of the score should be incremented by 1 and the
+                List of emoji cards should be shuffled.
+              </li>
+              <li className="popup-rules">
+                This process should be repeated every time the user clicks on an
+                emoji card
+              </li>
+              <li className="popup-rules">
+                When the user clicks on all Emoji cards without clicking any of
+                it twice, then the user will win the game
+              </li>
+              <li className="popup-rules">
+                When the user clicks on the same Emoji for the second time, then
+                the user will lose the game.
+              </li>
+              <li className="popup-rules">
+                Once the game is over, the user will be redirected to the
+                results page.
+              </li>
+            </ul>
+          </div>
+        </Modal>
       </EmojiGameContext.Provider>
     )
   }

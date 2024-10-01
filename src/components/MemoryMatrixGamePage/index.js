@@ -1,7 +1,7 @@
 import {Component} from 'react'
-// import Popup from 'reactjs-popup'
+import Modal from 'react-modal'
 import {BiArrowBack} from 'react-icons/bi'
-// import {CgClose} from 'react-icons/cg'
+import {CgClose} from 'react-icons/cg'
 import MemoryMatrixGrid from '../MemoryMatrixGrid'
 import MemoryMatrixResultPage from '../MemoryMatrixResultPage'
 import './index.css'
@@ -81,6 +81,7 @@ class MemoryMatrixGamePage extends Component {
     isMemorizing: true,
     isGameOver: false,
     showResults: false,
+    isRulesModalOpen: false,
   }
 
   componentDidMount() {
@@ -152,6 +153,14 @@ class MemoryMatrixGamePage extends Component {
     this.setState({showResults: false})
   }
 
+  openRulesModal = () => {
+    this.setState({isRulesModalOpen: true})
+  }
+
+  closeRulesModal = () => {
+    this.setState({isRulesModalOpen: false})
+  }
+
   render() {
     const {
       level,
@@ -161,6 +170,7 @@ class MemoryMatrixGamePage extends Component {
       showResults,
       isGameOver,
       selectedCells,
+      isRulesModalOpen,
     } = this.state
 
     if (showResults) {
@@ -193,25 +203,96 @@ class MemoryMatrixGamePage extends Component {
     }
 
     return (
-      <div className="memory-matrix-game-page-container">
-        <div className="back-btn-and-rules-btn-container">
-          <button
-            type="button"
-            className="memory-game-page-back-btn"
-            onClick={this.onClickBackBtn}
-          >
-            <BiArrowBack /> Back
-          </button>
+      <>
+        <div className="memory-matrix-game-page-container">
+          <div className="back-btn-and-rules-btn-container">
+            <button
+              type="button"
+              className="memory-game-page-back-btn"
+              onClick={this.onClickBackBtn}
+            >
+              <BiArrowBack /> Back
+            </button>
+
+            <button
+              className="rules-btn"
+              type="button"
+              onClick={this.openRulesModal}
+            >
+              Rules
+            </button>
+          </div>
+          <h1 className="game-page-heading">Memory Matrix - Level {level}</h1>
+          <MemoryMatrixGrid
+            numberOfGrids={numberOfGrids}
+            randomCells={randomCells}
+            selectedCells={selectedCells}
+            isMemorizing={isMemorizing}
+            onCellClick={this.handleCellClick}
+          />
         </div>
-        <h1 className="game-page-heading">Memory Matrix - Level {level}</h1>
-        <MemoryMatrixGrid
-          numberOfGrids={numberOfGrids}
-          randomCells={randomCells}
-          selectedCells={selectedCells}
-          isMemorizing={isMemorizing}
-          onCellClick={this.handleCellClick}
-        />
-      </div>
+
+        <Modal
+          isOpen={isRulesModalOpen}
+          onRequestClose={this.closeRulesModal}
+          className="rules-modal"
+          overlayClassName="rules-modal-overlay"
+          contentLabel="Rules Modal"
+        >
+          <div className="rules-content">
+            <CgClose
+              type="button"
+              onClick={this.closeRulesModal}
+              className="close-modal-btn"
+            />
+            <h2 className="game-page-rules-heading">Game Rules</h2>
+            <ul className="rules-unordered-container">
+              <div className="half-rules-container">
+                <li className="each-rule">
+                  In each level of the Game, Users should be able to see the
+                  Grid with (N X N) size starting from 3 and the grid will
+                  highlight N cells in Blue, the N highlighted cells will be
+                  picked randomly.
+                </li>
+
+                <li className="each-rule">
+                  The highlighted cells will remain N seconds for the user to
+                  memorize the cells. At this point, the user should not be able
+                  to perform any action.
+                </li>
+
+                <li className="each-rule">
+                  After N seconds, the grid will clear the N highlighted cells.
+                </li>
+              </div>
+
+              <div className="half-rules-container">
+                <li className="each-rule">
+                  At N seconds, the user can click on any cell. Clicking on a
+                  cell that was highlighted before it will turn blue. Clicking
+                  on the other cells that were not highlighted before then will
+                  turn to red.
+                </li>
+
+                <li className="each-rule">
+                  The user should be promoted to the next level if they guess
+                  all N cells correctly in one attempt.
+                </li>
+
+                <li className="each-rule">
+                  The user should be taken to the results page if the user
+                  clicks on the wrong cell.
+                </li>
+
+                <li className="each-rule">
+                  If the user completed all the levels, then the user should be
+                  taken to the results page.
+                </li>
+              </div>
+            </ul>
+          </div>
+        </Modal>
+      </>
     )
   }
 }

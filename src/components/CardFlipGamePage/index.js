@@ -1,6 +1,6 @@
 import {Component} from 'react'
-// import Popup from 'reactjs-popup'
-// import {CgClose} from 'react-icons/cg'
+import Modal from 'react-modal'
+import {CgClose} from 'react-icons/cg'
 import {BiArrowBack} from 'react-icons/bi'
 import CardFlipCardItem from '../CardFlipCardItem'
 import CardFlipResultPage from '../CardFlipResultPage'
@@ -59,6 +59,8 @@ const cardsData = [
   },
 ]
 
+Modal.setAppElement('#root')
+
 class CardFlipGamePage extends Component {
   state = {
     time: 120,
@@ -72,6 +74,7 @@ class CardFlipGamePage extends Component {
     numberOfClicks: 0,
     showResultPage: false,
     result: '',
+    isRulesModalOpen: false,
   }
 
   componentDidMount() {
@@ -79,7 +82,6 @@ class CardFlipGamePage extends Component {
   }
 
   startGame = () => {
-    // Assign an index-based unique key to each card
     const shuffledCards = this.shuffleCards(
       [...cardsData, ...cardsData].map((card, index) => ({
         ...card,
@@ -179,6 +181,12 @@ class CardFlipGamePage extends Component {
     }
   }
 
+  pressBackButtonOnGamePage = () => {
+    const {functionForPlayAgainBtnClicked} = this.props
+    clearInterval(this.timer)
+    functionForPlayAgainBtnClicked()
+  }
+
   renderTimer = () => {
     const {time} = this.state
     const minutes = Math.floor(time / 60)
@@ -186,6 +194,14 @@ class CardFlipGamePage extends Component {
     const formattedMinutes = minutes < 10 ? `0${minutes}` : minutes
     const formattedSeconds = seconds < 10 ? `0${seconds}` : seconds
     return `${formattedMinutes}:${formattedSeconds}`
+  }
+
+  openRulesModal = () => {
+    this.setState({isRulesModalOpen: true})
+  }
+
+  closeRulesModal = () => {
+    this.setState({isRulesModalOpen: false})
   }
 
   render() {
@@ -199,6 +215,7 @@ class CardFlipGamePage extends Component {
       result,
       lowestFlip,
       showResultPage,
+      isRulesModalOpen,
     } = this.state
 
     const {functionForPlayAgainBtnClicked} = this.props
@@ -212,15 +229,21 @@ class CardFlipGamePage extends Component {
         {!showResultPage && (
           <div className="card-flip-game-bg">
             <div className="back-and-rules-btn-container">
-              <button className="rules-btn" type="button">
-                Rules
-              </button>
               <button
                 type="button"
                 className="back-btn"
-                onClick={this.onClickBckBtn}
+                onClick={this.pressBackButtonOnGamePage}
               >
-                <BiArrowBack className="back-arrow" /> Back
+                <BiArrowBack className="back-arrow" />
+                Back
+              </button>
+
+              <button
+                className="rules-btn"
+                type="button"
+                onClick={this.openRulesModal}
+              >
+                Rules
               </button>
             </div>
             <h1 className="card-flip-memory-game-heading">
@@ -245,7 +268,7 @@ class CardFlipGamePage extends Component {
             <ul className="cardsContainer">
               {shuffledCards.map(eachCardData => (
                 <CardFlipCardItem
-                  key={eachCardData.id} // Use the unique key
+                  key={eachCardData.id}
                   eachCardData={eachCardData}
                   isFlipped={
                     flippedCards.includes(eachCardData) ||
@@ -265,6 +288,61 @@ class CardFlipGamePage extends Component {
             functionForPlayAgainBtnClicked={functionForPlayAgainBtnClicked}
           />
         )}
+
+        <Modal
+          isOpen={isRulesModalOpen}
+          onRequestClose={this.closeRulesModal}
+          className="rules-modal"
+          overlayClassName="rules-modal-overlay"
+          contentLabel="Rules Modal"
+        >
+          <div className="rules-content">
+            <CgClose
+              type="button"
+              onClick={this.closeRulesModal}
+              className="close-modal-btn"
+            />
+            <h2 className="game-page-rules-heading">Rules</h2>
+            <ul className="rules-unordered-container">
+              <div className="half-rules-container">
+                <li className="each-rule">
+                  When the game is started, the users should be able to see the
+                  list of Cards that are shuffled and turned face down.
+                </li>
+
+                <li className="each-rule">
+                  When a user starts the game, the user should be able to see
+                  the Timer running.
+                </li>
+
+                <li className="each-rule">The Timer starts from 2 Minutes.</li>
+
+                <li className="each-rule">
+                  If the two cards have the same image, they remain face up. If
+                  not, they should be flipped face down again after a short 2
+                  seconds.
+                </li>
+              </div>
+
+              <div className="half-rules-container">
+                <li className="each-rule">
+                  Users should be able to compare only two cards at a time.
+                </li>
+
+                <li className="each-rule">
+                  When the user is not able to find all the cards before the
+                  timer ends then the game should end and redirect to the Time
+                  Up Page.
+                </li>
+
+                <li className="each-rule">
+                  If the user finds all the matching cards before the timer
+                  ends, then the user should be redirected to the results page.
+                </li>
+              </div>
+            </ul>
+          </div>
+        </Modal>
       </>
     )
   }

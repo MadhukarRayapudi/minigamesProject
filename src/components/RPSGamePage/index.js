@@ -2,9 +2,9 @@ import {Component} from 'react'
 
 import {FaArrowLeft} from 'react-icons/fa'
 
-// import Popup from 'reactjs-popup'
+import Modal from 'react-modal'
 
-// import {CgClose} from 'react-icons/cg'
+import {CgClose} from 'react-icons/cg'
 
 import RPSChoiceItem from '../RPSChoiceItem'
 
@@ -33,93 +33,93 @@ import './index.css'
 //                   </button>
 //                   <h1 className="rps-popup-rules-heading"> Rules </h1>
 //                   <div className="popup-rules-container">
-//                     <div className="popup-six-rules-container">
-//                       <li className="popup-rules">
-//                         The game result should be based on user and user
-//                         opponent choices
-//                       </li>
-//                       <li className="popup-rules">
-//                         When the user choice is rock and his opponent choice is
-//                         rock then the result will be
-//                         <span className="span-for-popup-md-and-above-devices">
-//                           IT IS DRAW
-//                         </span>
-//                       </li>
-//                       <li className="popup-rules">
-//                         When the user choice is paper and his opponent choice is
-//                         rock then the result will be
-//                         <span className="span-for-popup-md-and-above-devices">
-//                           YOU WON
-//                         </span>
-//                       </li>
-//                       <li className="popup-rules">
-//                         When the user choice is a scissor and his opponent
-//                         choice is rock then the result will be
-//                         <span className="span-for-popup-md-and-above-devices">
-//                           YOU LOSE
-//                         </span>
-//                       </li>
-//                       <li className="popup-rules">
-//                         When the user choice is paper and his opponent choice is
-//                         paper then the result will be
-//                         <span className="span-for-popup-md-and-above-devices">
-//                           IT IS DRAW
-//                         </span>
-//                       </li>
-//                       <li className="popup-rules">
-//                         When the user choice is scissors and his opponent choice
-//                         is paper then the result will be
-//                         <span className="span-for-popup-md-and-above-devices">
-//                           YOU WON
-//                         </span>
-//                       </li>
-//                     </div>
+// <div className="popup-six-rules-container">
+//   <li className="popup-rules">
+//     The game result should be based on user and user
+//     opponent choices
+//   </li>
+//   <li className="popup-rules">
+//     When the user choice is rock and his opponent choice is
+//     rock then the result will be
+//     <span className="span-for-popup-md-and-above-devices">
+//       IT IS DRAW
+//     </span>
+//   </li>
+//   <li className="popup-rules">
+//     When the user choice is paper and his opponent choice is
+//     rock then the result will be
+//     <span className="span-for-popup-md-and-above-devices">
+//       YOU WON
+//     </span>
+//   </li>
+//   <li className="popup-rules">
+//     When the user choice is a scissor and his opponent
+//     choice is rock then the result will be
+//     <span className="span-for-popup-md-and-above-devices">
+//       YOU LOSE
+//     </span>
+//   </li>
+//   <li className="popup-rules">
+//     When the user choice is paper and his opponent choice is
+//     paper then the result will be
+//     <span className="span-for-popup-md-and-above-devices">
+//       IT IS DRAW
+//     </span>
+//   </li>
+//   <li className="popup-rules">
+//     When the user choice is scissors and his opponent choice
+//     is paper then the result will be
+//     <span className="span-for-popup-md-and-above-devices">
+//       YOU WON
+//     </span>
+//   </li>
+// </div>
 
-//                     <div className="popup-six-rules-container">
-//                       <li className="popup-rules">
-//                         When the user choice is rock and his opponent choice is
-//                         scissors then the result will be
-//                         <span className="span-for-popup-md-and-above-devices">
-//                           YOU WON
-//                         </span>
-//                       </li>
-//                       <li className="popup-rules">
-//                         When the user choice is paper and his opponent choice is
-//                         scissors then the result will be
-//                         <span className="span-for-popup-md-and-above-devices">
-//                           YOU LOSE
-//                         </span>
-//                       </li>
-//                       <li className="popup-rules">
-//                         When the user choice is scissors and his opponent choice
-//                         is scissors then the result will be
-//                         <span className="span-for-popup-md-and-above-devices">
-//                           IT IS DRAW
-//                         </span>
-//                       </li>
-//                       <li className="popup-rules">
-//                         When the result is
-//                         <span className="span-for-popup-md-and-above-devices">
-//                           YOU WON
-//                         </span>
-//                         , then the count of the score should be incremented by 1
-//                       </li>
-//                       <li className="popup-rules">
-//                         When the result is
-//                         <span className="span-for-popup-md-and-above-devices">
-//                           IT IS DRAW
-//                         </span>
-//                         , then the count of the score should be the same
-//                       </li>
-//                       <li className="popup-rules">
-//                         When the result is
-//                         <span className="span-for-popup-md-and-above-devices">
-//                           YOU LOSE
-//                         </span>
-//                         , then the count of the score should be decremented by
-//                         1.
-//                       </li>
-//                     </div>
+// <div className="popup-six-rules-container">
+//   <li className="popup-rules">
+//     When the user choice is rock and his opponent choice is
+//     scissors then the result will be
+//     <span className="span-for-popup-md-and-above-devices">
+//       YOU WON
+//     </span>
+//   </li>
+//   <li className="popup-rules">
+//     When the user choice is paper and his opponent choice is
+//     scissors then the result will be
+//     <span className="span-for-popup-md-and-above-devices">
+//       YOU LOSE
+//     </span>
+//   </li>
+//   <li className="popup-rules">
+//     When the user choice is scissors and his opponent choice
+//     is scissors then the result will be
+//     <span className="span-for-popup-md-and-above-devices">
+//       IT IS DRAW
+//     </span>
+//   </li>
+//   <li className="popup-rules">
+//     When the result is
+//     <span className="span-for-popup-md-and-above-devices">
+//       YOU WON
+//     </span>
+//     , then the count of the score should be incremented by 1
+//   </li>
+//   <li className="popup-rules">
+//     When the result is
+//     <span className="span-for-popup-md-and-above-devices">
+//       IT IS DRAW
+//     </span>
+//     , then the count of the score should be the same
+//   </li>
+//   <li className="popup-rules">
+//     When the result is
+//     <span className="span-for-popup-md-and-above-devices">
+//       YOU LOSE
+//     </span>
+//     , then the count of the score should be decremented by
+//     1.
+//   </li>
+// </div>
 //                   </div>
 //                 </ul>
 //               </>
@@ -153,6 +153,7 @@ class RPSGamePage extends Component {
     result: '',
     gameInProgress: true,
     score: 0,
+    isRulesModalOpen: false,
   }
 
   changeGameStatus = () => this.setState({gameInProgress: true})
@@ -207,6 +208,14 @@ class RPSGamePage extends Component {
     }
   }
 
+  openRulesModal = () => {
+    this.setState({isRulesModalOpen: true})
+  }
+
+  closeRulesModal = () => {
+    this.setState({isRulesModalOpen: false})
+  }
+
   render() {
     const {
       gameInProgress,
@@ -214,39 +223,156 @@ class RPSGamePage extends Component {
       score,
       userSelectedOptionImage,
       computerChoiceImage,
+      isRulesModalOpen,
     } = this.state
-    return gameInProgress ? (
-      <div className="rps-game-page">
-        <div className="back-btn-rules-and-btn-container">
-          <button
-            type="button"
-            className="rps-game-page-back-button"
-            onClick={this.GoBackToRulesPageBtn}
-          >
-            <FaArrowLeft className="rps-back-icon" />
-            Back
-          </button>
-        </div>
-        <h1 className="rps-game-page-heading"> ROCK PAPER SCISSOR </h1>
-        <h1 className="rps-game-page-pick-heading"> Let&apos;s Pick </h1>
-        <ul className="images-container">
-          {choicesList.map(eachItem => (
-            <RPSChoiceItem
-              eachItem={eachItem}
-              onClickAnOption={this.onClickAnOption}
-              key={eachItem.id}
+    return (
+      <>
+        <Modal
+          isOpen={isRulesModalOpen}
+          onRequestClose={this.closeRulesModal}
+          className="rules-modal"
+          overlayClassName="rules-modal-overlay"
+          contentLabel="Rules Modal"
+        >
+          <div className="rules-content">
+            <CgClose
+              type="button"
+              onClick={this.closeRulesModal}
+              className="close-modal-btn"
             />
-          ))}
-        </ul>
-      </div>
-    ) : (
-      <ResultPage
-        result={result}
-        score={score}
-        userSelectedOptionImage={userSelectedOptionImage}
-        computerChoiceImage={computerChoiceImage}
-        changeGameStatus={this.changeGameStatus}
-      />
+            <h2 className="game-page-rules-heading">Game Rules</h2>
+            <ul className="rules-unordered-container">
+              <div className="popup-six-rules-container">
+                <li className="popup-rules">
+                  The game result should be based on user and user opponent
+                  choices
+                </li>
+                <li className="popup-rules">
+                  When the user choice is rock and his opponent choice is rock
+                  then the result will be
+                  <span className="span-for-popup-md-and-above-devices">
+                    IT IS DRAW
+                  </span>
+                </li>
+                <li className="popup-rules">
+                  When the user choice is paper and his opponent choice is rock
+                  then the result will be
+                  <span className="span-for-popup-md-and-above-devices">
+                    YOU WON
+                  </span>
+                </li>
+                <li className="popup-rules">
+                  When the user choice is a scissor and his opponent choice is
+                  rock then the result will be
+                  <span className="span-for-popup-md-and-above-devices">
+                    YOU LOSE
+                  </span>
+                </li>
+                <li className="popup-rules">
+                  When the user choice is paper and his opponent choice is paper
+                  then the result will be
+                  <span className="span-for-popup-md-and-above-devices">
+                    IT IS DRAW
+                  </span>
+                </li>
+                <li className="popup-rules">
+                  When the user choice is scissors and his opponent choice is
+                  paper then the result will be
+                  <span className="span-for-popup-md-and-above-devices">
+                    YOU WON
+                  </span>
+                </li>
+              </div>
+
+              <div className="popup-six-rules-container">
+                <li className="popup-rules">
+                  When the user choice is rock and his opponent choice is
+                  scissors then the result will be
+                  <span className="span-for-popup-md-and-above-devices">
+                    YOU WON
+                  </span>
+                </li>
+                <li className="popup-rules">
+                  When the user choice is paper and his opponent choice is
+                  scissors then the result will be
+                  <span className="span-for-popup-md-and-above-devices">
+                    YOU LOSE
+                  </span>
+                </li>
+                <li className="popup-rules">
+                  When the user choice is scissors and his opponent choice is
+                  scissors then the result will be
+                  <span className="span-for-popup-md-and-above-devices">
+                    IT IS DRAW
+                  </span>
+                </li>
+                <li className="popup-rules">
+                  When the result is
+                  <span className="span-for-popup-md-and-above-devices">
+                    YOU WON
+                  </span>
+                  , then the count of the score should be incremented by 1
+                </li>
+                <li className="popup-rules">
+                  When the result is
+                  <span className="span-for-popup-md-and-above-devices">
+                    IT IS DRAW
+                  </span>
+                  , then the count of the score should be the same
+                </li>
+                <li className="popup-rules">
+                  When the result is
+                  <span className="span-for-popup-md-and-above-devices">
+                    YOU LOSE
+                  </span>
+                  , then the count of the score should be decremented by 1.
+                </li>
+              </div>
+            </ul>
+          </div>
+        </Modal>
+        {gameInProgress ? (
+          <div className="rps-game-page">
+            <div className="back-btn-rules-and-btn-container">
+              <button
+                type="button"
+                className="rps-game-page-back-button"
+                onClick={this.GoBackToRulesPageBtn}
+              >
+                <FaArrowLeft className="rps-back-icon" />
+                Back
+              </button>
+
+              <button
+                className="rules-btn"
+                type="button"
+                onClick={this.openRulesModal}
+              >
+                Rules
+              </button>
+            </div>
+            <h1 className="rps-game-page-heading"> ROCK PAPER SCISSOR </h1>
+            <h1 className="rps-game-page-pick-heading"> Let&apos;s Pick </h1>
+            <ul className="images-container">
+              {choicesList.map(eachItem => (
+                <RPSChoiceItem
+                  eachItem={eachItem}
+                  onClickAnOption={this.onClickAnOption}
+                  key={eachItem.id}
+                />
+              ))}
+            </ul>
+          </div>
+        ) : (
+          <ResultPage
+            result={result}
+            score={score}
+            userSelectedOptionImage={userSelectedOptionImage}
+            computerChoiceImage={computerChoiceImage}
+            changeGameStatus={this.changeGameStatus}
+          />
+        )}
+      </>
     )
   }
 }

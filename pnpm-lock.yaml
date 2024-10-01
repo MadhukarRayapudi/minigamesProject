@@ -10486,6 +10486,14 @@ packages:
       react-is: 16.13.1
     resolution:
       integrity: sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
+  /prop-types/15.8.1:
+    dependencies:
+      loose-envify: 1.4.0
+      object-assign: 4.1.1
+      react-is: 16.13.1
+    dev: false
+    resolution:
+      integrity: sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
   /proxy-addr/2.0.7:
     dependencies:
       forwarded: 0.2.0
@@ -10740,7 +10748,7 @@ packages:
   /react-modal/3.14.3_react-dom@17.0.1+react@17.0.1:
     dependencies:
       exenv: 1.2.2
-      prop-types: 15.7.2
+      prop-types: 15.8.1
       react: 17.0.1
       react-dom: 17.0.1_react@17.0.1
       react-lifecycles-compat: 3.0.4
