@@ -1,3 +1,5 @@
+import {Line} from 'rc-progress'
+
 import './index.css'
 
 const MemoryMatrixResultPage = props => {
@@ -11,25 +13,52 @@ const MemoryMatrixResultPage = props => {
 
   return (
     <div className="result-page-bg">
-      <ul className="emojis-container">
-        <li className="emoji"> 😐 </li>
-        <li className="emoji"> 😬</li>
-        <li className="emoji">🙂</li>
-        <li className="emoji"> 😃</li>
-        <li className="emoji">😄</li>
-        <li className="emoji">😁</li>
-        <li className="emoji"> 😀 </li>
-        <li className="emoji"> 😎 </li>
-      </ul>
-      <div className="score-bar-parent">
-        <div className="score-bar" style={{width: `${score - 1}0%`}} />
+      <div className="emojis-container">
+        <img
+          src="https://res.cloudinary.com/dqv0mp6k8/image/upload/v1728393614/cz62vzeuw2egoxwun4ge.png"
+          alt="neutral face"
+        />
+        <img
+          src="https://res.cloudinary.com/dqv0mp6k8/image/upload/v1728393773/jmil9at2cdnfqijamnoe.png"
+          alt="grimacing face"
+        />
+        <img
+          src="https://res.cloudinary.com/dqv0mp6k8/image/upload/v1728393871/2x_guakoj.png"
+          alt="slightly smiling face"
+        />
+        <img
+          src="https://res.cloudinary.com/dqv0mp6k8/image/upload/v1728393998/03_Optimistic_fcbmnz.png"
+          alt="grinning face with big eyes"
+        />
+        <img
+          src="https://res.cloudinary.com/dqv0mp6k8/image/upload/v1728394088/04_Grin_driej2.png"
+          alt="grinning face with smiling eyes"
+        />
+        <img
+          src="https://res.cloudinary.com/dqv0mp6k8/image/upload/v1728394169/05_Laugh_t9khn2.png"
+          alt="beaming face with smiling eyes"
+        />
+        <img
+          src="https://res.cloudinary.com/dqv0mp6k8/image/upload/v1728394255/02_Happy_iyqxc4.png"
+          alt="grinning face"
+        />
+        <img
+          src="https://res.cloudinary.com/dqv0mp6k8/image/upload/v1728394328/02_Like_a_boss_oez0ba.png"
+          alt="smiling face with sunglasses"
+        />
       </div>
-      <ul className="levels-container">
-        <li className="level"> Level 1 </li>
-        <li className="level"> Level 5 </li>
-        <li className="level"> Level 10 </li>
-        <li className="level"> Level 15 </li>
-      </ul>
+      <Line
+        className="score-bar"
+        percent={`${score}0`}
+        strokeWidth={4}
+        strokeColor="#D3D3D3"
+      />
+      <div className="levels-container">
+        <p className="level"> Level 1 </p>
+        <p className="level"> Level 5 </p>
+        <p className="level"> Level 10 </p>
+        <p className="level"> Level 15 </p>
+      </div>
       <h1 className="congo-heading"> Congratulations </h1>
       <p className="result-txt"> You have reached level {score} </p>
       <button

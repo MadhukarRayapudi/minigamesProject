@@ -59,8 +59,6 @@ const cardsData = [
   },
 ]
 
-// Modal.setAppElement('#root')
-
 class CardFlipGamePage extends Component {
   state = {
     time: 120,
