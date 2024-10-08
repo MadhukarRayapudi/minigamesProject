@@ -14,7 +14,7 @@ const Navbar = props => {
       </div>
       {score >= 0 && (
         <div className="nav-child-score-container">
-          <h1 className="score">Score: {score}</h1>
+          <p className="score">Score: {score}</p>
           <h1 className="score">Top Score: {topScore}</h1>
         </div>
       )}

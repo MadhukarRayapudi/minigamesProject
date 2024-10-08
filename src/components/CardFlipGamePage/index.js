@@ -59,7 +59,7 @@ const cardsData = [
   },
 ]
 
-Modal.setAppElement('#root')
+// Modal.setAppElement('#root')
 
 class CardFlipGamePage extends Component {
   state = {
@@ -254,13 +254,13 @@ class CardFlipGamePage extends Component {
               <p className="paragraph"> {this.renderTimer()} </p>
             </div>
             <div className="paragraphs-container-sm">
-              <p className="paragraph"> Card Flip Count - {flipCount} </p>
+              <p className="paragraph"> Card flip count - {flipCount} </p>
               <p className="paragraph"> Score - {displayedScore} </p>
             </div>
 
             <p className="timer"> {this.renderTimer()} </p>
             <div className="paragraphs-container">
-              <p className="paragraph-md"> Card Flip Count - {flipCount} </p>
+              <p className="paragraph-md"> Card flip count - {flipCount} </p>
               <p className="paragraph-md"> Lowest Flip - {lowestFlipCount} </p>
               <p className="paragraph-md"> Score - {displayedScore} </p>
             </div>
@@ -297,11 +297,12 @@ class CardFlipGamePage extends Component {
           contentLabel="Rules Modal"
         >
           <div className="rules-content">
-            <CgClose
-              type="button"
-              onClick={this.closeRulesModal}
-              className="close-modal-btn"
-            />
+            <button data-testid="close" type="button" className="close-btn">
+              <CgClose
+                onClick={this.closeRulesModal}
+                className="close-modal-btn"
+              />
+            </button>
             <h2 className="game-page-rules-heading">Rules</h2>
             <ul className="rules-unordered-container">
               <div className="half-rules-container">

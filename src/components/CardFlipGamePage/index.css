@@ -226,3 +226,9 @@
 .close-modal-btn:hover {
   background-color: #0056b3;
 }
+
+.close-btn {
+  background-color: transparent;
+  border: 0;
+  align-self: flex-end;
+}

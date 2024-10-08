@@ -25,15 +25,15 @@ const ResultPage = props => {
     resultEmojiAlt = 'Smiling face with star eyes'
     resultBigEmoji =
       'https://res.cloudinary.com/dwtnrleoa/image/upload/v1724501857/Group_7618_1_ltejkt.png'
-    resultBigEmojiAlt = 'won'
+    resultBigEmojiAlt = 'won emoji'
   } else if (result === 'draw') {
     resultText = 'IT IS DRAW'
-    resultEmojiAlt = 'draw emoji'
+    resultEmojiAlt = 'Face without mouth'
     resultEmoji =
       'https://res.cloudinary.com/dqv0mp6k8/image/upload/v1724677755/Emoji_2_cn5ikn.png'
     resultBigEmoji =
       'https://res.cloudinary.com/dwtnrleoa/image/upload/v1724502376/Group_7618_egfrhn.png'
-    resultBigEmojiAlt = 'won'
+    resultBigEmojiAlt = 'draw emoji'
   } else {
     resultText = 'YOU LOSE'
     resultEmoji =
@@ -41,7 +41,7 @@ const ResultPage = props => {
     resultEmojiAlt = 'Face without mouth'
     resultBigEmoji =
       'https://res.cloudinary.com/dwtnrleoa/image/upload/v1724502411/Group_7618_2_b2xxmg.png'
-    resultBigEmojiAlt = 'won'
+    resultBigEmojiAlt = 'lose emoji'
   }
 
   if (userSelectedOptionImage.includes('rock-image')) {
@@ -67,7 +67,7 @@ const ResultPage = props => {
     <div className="result-page">
       <h1 className="result-page-heading">Rock Paper Scissor</h1>
       <div className="result-page-top-container">
-        <h1 className="rock-paper-scissor-heading2"> Rock Paper Scissor </h1>
+        <h1 className="rock-paper-scissor-heading2">Rock Paper Scissor</h1>
         <div className="heading-sm-container">
           <li className="li-item">Rock</li>
           <li className="li-item"> Paper </li>

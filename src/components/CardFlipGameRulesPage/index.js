@@ -42,7 +42,7 @@ class CardFlipGameRulesPage extends Component {
             </button>
             <img
               src="https://res.cloudinary.com/dqv0mp6k8/image/upload/v1726821344/animals_2_lh1let.png"
-              alt="card flip"
+              alt="card flip memory game"
               className="rules-page-img"
             />
             <h1 className="rules-heading"> Rules </h1>
@@ -86,7 +86,7 @@ class CardFlipGameRulesPage extends Component {
               type="button"
               onClick={this.onClickStartPlayingBtn}
             >
-              Start Playing
+              Start playing
             </button>
           </div>
         ) : (

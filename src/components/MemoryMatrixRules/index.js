@@ -91,7 +91,7 @@ class MemoryMatrixRules extends Component {
           className="start-sm-btn"
           onClick={this.onClickStartBtn}
         >
-          Start Playing
+          Start playing
         </button>
       </div>
     ) : (

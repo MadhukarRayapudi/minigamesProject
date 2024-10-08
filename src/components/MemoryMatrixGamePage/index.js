@@ -6,71 +6,6 @@ import MemoryMatrixGrid from '../MemoryMatrixGrid'
 import MemoryMatrixResultPage from '../MemoryMatrixResultPage'
 import './index.css'
 
-// <Popup
-//             modal
-//             trigger={
-//               <button className="rules-btn" type="button">
-//                 Rules
-//               </button>
-//             }
-//           >
-//             {close => (
-//               <>
-//                 <ul className="popup-container">
-//                   <button
-//                     className="close-button"
-//                     type="button"
-//                     data-testid="close"
-//                     onClick={() => close()}
-//                   >
-//                     <CgClose />
-//                   </button>
-//                   <h1 className="popup-rules-heading"> Rules </h1>
-//                   <div className="rules-container-md-devices">
-//                     <div className="half-rules-container1">
-//                       <li className="popup-rules">
-//                         In each level of the Game, Users should be able to see
-//                         the Grid with (N X N) size starting from 3 and the grid
-//                         will highlight N cells in Blue, the N highlighted cells
-//                         will be picked randomly.
-//                       </li>
-//                       <li className="popup-rules">
-//                         The highlighted cells will remain N seconds for the user
-//                         to memorize the cells. At this point, the user should
-//                         not be able to perform any action.
-//                       </li>
-//                       <li className="popup-rules">
-//                         After N seconds, the grid will clear the N highlighted
-//                         cells.
-//                       </li>
-//                     </div>
-
-//                     <div className="half-rules-container">
-//                       <li className="popup-rules">
-//                         At N seconds, the user can click on any cell. Clicking
-//                         on a cell that was highlighted before it will turn blue.
-//                         Clicking on the other cells that were not highlighted
-//                         before then will turn to red.
-//                       </li>
-//                       <li className="popup-rules">
-//                         The user should be promoted to the next level if they
-//                         guess all N cells correctly in one attempt.
-//                       </li>
-//                       <li className="popup-rules">
-//                         The user should be taken to the results page if the user
-//                         clicks on the wrong cell.
-//                       </li>
-//                       <li className="popup-rules">
-//                         If the user completed all the levels, then the user
-//                         should be taken to the results page.
-//                       </li>
-//                     </div>
-//                   </div>
-//                 </ul>
-//               </>
-//             )}
-//           </Popup>
-
 class MemoryMatrixGamePage extends Component {
   state = {
     level: 1,
@@ -222,7 +157,8 @@ class MemoryMatrixGamePage extends Component {
               Rules
             </button>
           </div>
-          <h1 className="game-page-heading">Memory Matrix - Level {level}</h1>
+          <h1 className="game-page-heading">Memory Matrix</h1>
+          <p className="level-heading"> Level - {level} </p>
           <MemoryMatrixGrid
             numberOfGrids={numberOfGrids}
             randomCells={randomCells}
@@ -240,12 +176,13 @@ class MemoryMatrixGamePage extends Component {
           contentLabel="Rules Modal"
         >
           <div className="rules-content">
-            <CgClose
-              type="button"
-              onClick={this.closeRulesModal}
-              className="close-modal-btn"
-            />
-            <h2 className="game-page-rules-heading">Game Rules</h2>
+            <button data-testid="close" type="button" className="close-btn">
+              <CgClose
+                onClick={this.closeRulesModal}
+                className="close-modal-btn"
+              />
+            </button>
+            <h2 className="game-page-rules-heading">Rules</h2>
             <ul className="rules-unordered-container">
               <div className="half-rules-container">
                 <li className="each-rule">

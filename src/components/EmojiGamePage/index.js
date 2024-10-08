@@ -14,57 +14,6 @@ import EmojiGameContext from '../EmojiGameContext'
 
 import './index.css'
 
-// <Popup
-//                   modal
-//                   trigger={
-//                     <button className="rules-btn" type="button">
-//                       Rules
-//                     </button>
-//                   }
-//                 >
-//                   {close => (
-//                     <>
-//                       <ul className="popup-container">
-//                         <button
-//                           className="close-button"
-//                           type="button"
-//                           data-testid="close"
-//                           onClick={() => close()}
-//                         >
-//                           <CgClose />
-//                         </button>
-//                         <h1 className="popup-rules-heading"> Rules </h1>
-// <li className="popup-rules">
-//   User should be able to see the list of Emojis
-// </li>
-// <li className="popup-rules">
-//   When the user clicks any one of the Emoji for the
-//   first time, then the count of the score should be
-//   incremented by 1 and the List of emoji cards should be
-//   shuffled.
-// </li>
-// <li className="popup-rules">
-//   This process should be repeated every time the user
-//   clicks on an emoji card
-// </li>
-// <li className="popup-rules">
-//   When the user clicks on all Emoji cards without
-//   clicking any of it twice, then the user will win the
-//   game
-// </li>
-// <li className="popup-rules">
-//   When the user clicks on the same Emoji for the second
-//   time, then the user will lose the game.
-// </li>
-// <li className="popup-rules">
-//   Once the game is over, the user will be redirected to
-//   the results page.
-// </li>
-//                       </ul>
-//                     </>
-//                   )}
-//                 </Popup>
-
 const emojisList = [
   {
     id: 0,
@@ -293,12 +242,14 @@ class EmojiGamePage extends Component {
           contentLabel="Rules Modal"
         >
           <div className="rules-content">
-            <CgClose
-              type="button"
-              onClick={this.closeRulesModal}
-              className="close-modal-btn"
-            />
-            <h2 className="game-page-rules-heading">Game Rules</h2>
+            <button data-testid="close" type="button" className="close-btn">
+              <CgClose
+                onClick={this.closeRulesModal}
+                className="close-modal-btn"
+              />
+            </button>
+
+            <h2 className="game-page-rules-heading">Rules</h2>
             <ul className="rules-unordered-container-emoji-game">
               <li className="popup-rules">
                 User should be able to see the list of Emojis

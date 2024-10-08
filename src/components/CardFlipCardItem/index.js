@@ -20,7 +20,12 @@ const CardFlipCardItem = props => {
 
   return (
     <li className="eachCard">
-      <button className="eachCardBtn" type="button" onClick={handleClick}>
+      <button
+        className="eachCardBtn"
+        type="button"
+        onClick={handleClick}
+        data-testid={eachCardData.name}
+      >
         <img
           src={cardImage}
           alt={eachCardData.name}

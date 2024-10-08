@@ -49,7 +49,7 @@ class RPSRulesPage extends Component {
 
                   <li className="rps-rule">
                     When the user choice is rock and his opponent choice is rock
-                    then the result will be
+                    then the result will be{' '}
                     <span className="span-element-for-md-devices">
                       IT IS DRAW
                     </span>
@@ -60,14 +60,14 @@ class RPSRulesPage extends Component {
 
                   <li className="rps-rule">
                     When the user choice is paper and his opponent choice is
-                    rock then the result will be
+                    rock then the result will be{' '}
                     <span className="span-element-for-md-devices">YOU WON</span>
                     <span className="span-element-for-sm-devices">YOU WON</span>
                   </li>
 
                   <li className="rps-rule">
                     When the user choice is a scissor and his opponent choice is
-                    rock then the result will be
+                    rock then the result will be{' '}
                     <span className="span-element-for-md-devices">
                       YOU LOSE
                     </span>
@@ -78,7 +78,7 @@ class RPSRulesPage extends Component {
 
                   <li className="rps-rule">
                     When the user choice is paper and his opponent choice is
-                    paper then the result will be
+                    paper then the result will be{' '}
                     <span className="span-element-for-md-devices">
                       IT IS DRAW
                     </span>
@@ -89,7 +89,7 @@ class RPSRulesPage extends Component {
 
                   <li className="rps-rule">
                     When the user choice is scissors and his opponent choice is
-                    paper then the result will be
+                    paper then the result will be{' '}
                     <span className="span-element-for-md-devices">YOU WON</span>
                     <span className="span-element-for-sm-devices">YOU WON</span>
                   </li>
@@ -98,14 +98,14 @@ class RPSRulesPage extends Component {
                 <div className="rps-six-rules-container">
                   <li className="rps-rule">
                     When the user choice is rock and his opponent choice is
-                    scissors then the result will be
+                    scissors then the result will be{' '}
                     <span className="span-element-for-md-devices">YOU WON</span>
                     <span className="span-element-for-sm-devices">YOU WON</span>
                   </li>
 
                   <li className="rps-rule">
                     When the user choice is paper and his opponent choice is
-                    scissors then the result will be
+                    scissors then the result will be{' '}
                     <span className="span-element-for-md-devices">
                       YOU LOSE
                     </span>
@@ -116,7 +116,7 @@ class RPSRulesPage extends Component {
 
                   <li className="rps-rule">
                     When the user choice is scissors and his opponent choice is
-                    scissors then the result will be
+                    scissors then the result will be{' '}
                     <span className="span-element-for-md-devices">
                       IT IS DRAW
                     </span>
@@ -126,14 +126,14 @@ class RPSRulesPage extends Component {
                   </li>
 
                   <li className="rps-rule">
-                    When the result is
+                    When the result is{' '}
                     <span className="span-element-for-md-devices">YOU WON</span>
                     <span className="span-element-for-sm-devices">YOU WON</span>
                     , then the count of the score should be incremented by 1
                   </li>
 
                   <li className="rps-rule">
-                    When the result is
+                    When the result is{' '}
                     <span className="span-element-for-md-devices">
                       IT IS DRAW
                     </span>
@@ -144,7 +144,7 @@ class RPSRulesPage extends Component {
                   </li>
 
                   <li className="rps-rule">
-                    When the result is
+                    When the result is{' '}
                     <span className="span-element-for-md-devices">
                       IT IS DRAW
                     </span>
@@ -161,7 +161,7 @@ class RPSRulesPage extends Component {
               className="rps-start-playing-btn"
               onClick={this.onClickStartPlayingBtn}
             >
-              Start Playing
+              Start playing
             </button>
           </div>
         ) : (

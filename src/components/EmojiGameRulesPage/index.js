@@ -75,7 +75,7 @@ class EmojiGameRulesPage extends Component {
                   className="start-play-button"
                   onClick={this.startPlayingClicked}
                 >
-                  Start Playing
+                  Start playing
                 </button>
               </ul>
             </div>
