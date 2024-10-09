@@ -28,3 +28,19 @@
 .grid-cell.incorrect {
   background-color: red; /* Incorrectly guessed color */
 }
+
+.cell-item {
+  list-style-type: none;
+}
+
+.correct {
+  background-color: transparent;
+}
+
+.incorrect {
+  background-color: transparent;
+}
+
+.highlighted {
+  background-color: transparent;
+}

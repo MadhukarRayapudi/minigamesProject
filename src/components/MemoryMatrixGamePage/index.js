@@ -111,10 +111,6 @@ class MemoryMatrixGamePage extends Component {
     if (showResults) {
       const {onClickGamePageBckBtn} = this.props
       return (
-        // <div className="result-container">
-        //   <h1>Congratulations! You have completed all levels.</h1>
-        //   <button onClick={this.onClickRestart}>Restart</button>
-        // </div>
         <MemoryMatrixResultPage
           score={level}
           onClickGamePageBckBtn={onClickGamePageBckBtn}
@@ -125,11 +121,6 @@ class MemoryMatrixGamePage extends Component {
     if (isGameOver) {
       const {onClickGamePageBckBtn} = this.props
       return (
-        // <div className="result-container">
-        //   <h1>Game Over!</h1>
-        //   <button onClick={this.onClickBackBtn}>Restart</button>
-        // </div>
-
         <MemoryMatrixResultPage
           score={level}
           onClickGamePageBckBtn={onClickGamePageBckBtn}
@@ -182,7 +173,7 @@ class MemoryMatrixGamePage extends Component {
                 className="close-modal-btn"
               />
             </button>
-            <h2 className="game-page-rules-heading">Rules</h2>
+            <h1 className="game-page-rules-heading">Rules</h1>
             <ul className="rules-unordered-container">
               <div className="half-rules-container">
                 <li className="each-rule">

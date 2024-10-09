@@ -1,55 +1,28 @@
 import {Line} from 'rc-progress'
-
 import './index.css'
 
 const MemoryMatrixResultPage = props => {
   const {score, onClickGamePageBckBtn} = props
-  // console.log(`${score - 1}0`)
+
+  const calculateProgress = () => {
+    if (score <= 10) {
+      return ((score - 1) / 9) * 60 // Progress from 0% to 60% for levels 1 to 10
+    }
+    return 60 + ((score - 10) / 5) * 40 // Progress from 60% to 100% for levels 11 to 15
+  }
+
+  const progressPercentage = calculateProgress()
+
   const playAgainClicked = () => {
     onClickGamePageBckBtn()
   }
-  // const percent = `${score - 1}0` / 7
-  // console.log(percent)
 
   return (
     <div className="result-page-bg">
-      <div className="emojis-container">
-        <img
-          src="https://res.cloudinary.com/dqv0mp6k8/image/upload/v1728393614/cz62vzeuw2egoxwun4ge.png"
-          alt="neutral face"
-        />
-        <img
-          src="https://res.cloudinary.com/dqv0mp6k8/image/upload/v1728393773/jmil9at2cdnfqijamnoe.png"
-          alt="grimacing face"
-        />
-        <img
-          src="https://res.cloudinary.com/dqv0mp6k8/image/upload/v1728393871/2x_guakoj.png"
-          alt="slightly smiling face"
-        />
-        <img
-          src="https://res.cloudinary.com/dqv0mp6k8/image/upload/v1728393998/03_Optimistic_fcbmnz.png"
-          alt="grinning face with big eyes"
-        />
-        <img
-          src="https://res.cloudinary.com/dqv0mp6k8/image/upload/v1728394088/04_Grin_driej2.png"
-          alt="grinning face with smiling eyes"
-        />
-        <img
-          src="https://res.cloudinary.com/dqv0mp6k8/image/upload/v1728394169/05_Laugh_t9khn2.png"
-          alt="beaming face with smiling eyes"
-        />
-        <img
-          src="https://res.cloudinary.com/dqv0mp6k8/image/upload/v1728394255/02_Happy_iyqxc4.png"
-          alt="grinning face"
-        />
-        <img
-          src="https://res.cloudinary.com/dqv0mp6k8/image/upload/v1728394328/02_Like_a_boss_oez0ba.png"
-          alt="smiling face with sunglasses"
-        />
-      </div>
+      <div className="emojis-container">{/* Emojis display */}</div>
       <Line
         className="score-bar"
-        percent={`${score}0`}
+        percent={progressPercentage}
         strokeWidth={4}
         strokeColor="#D3D3D3"
       />

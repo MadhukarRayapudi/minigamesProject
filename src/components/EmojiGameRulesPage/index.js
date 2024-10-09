@@ -38,6 +38,7 @@ class EmojiGameRulesPage extends Component {
               <BiArrowBack className="back-icon" />
               Back
             </button>
+            <h1 className="emoji-game-rules-page-heading"> Emoji Game </h1>
             <div className="game-rules-container">
               <img
                 className="image"

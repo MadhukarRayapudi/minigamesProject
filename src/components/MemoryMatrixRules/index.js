@@ -56,13 +56,6 @@ class MemoryMatrixRules extends Component {
             <li className="memory-matrix-rule">
               After N seconds, the grid will clear the N highlighted cells.
             </li>
-            <button
-              type="button"
-              className="start-md-btn"
-              onClick={this.onClickStartBtn}
-            >
-              Start playing
-            </button>
           </div>
 
           <div className="rules-half-container">
@@ -88,7 +81,7 @@ class MemoryMatrixRules extends Component {
         </ul>
         <button
           type="button"
-          className="start-sm-btn"
+          className="start-game-btn"
           onClick={this.onClickStartBtn}
         >
           Start playing

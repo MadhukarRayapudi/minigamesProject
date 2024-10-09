@@ -212,13 +212,13 @@ class EmojiGamePage extends Component {
                   <div>
                     <img
                       src="https://res.cloudinary.com/dqv0mp6k8/image/upload/v1722609015/Image_1_ll8r90.png"
-                      alt="game won"
+                      alt="lose"
                       className="result-image"
                     />
                   </div>
 
                   <div className="lose-container">
-                    <h1 className="won-or-lose-text"> You Loss </h1>
+                    <h1 className="won-or-lose-text"> You Lose </h1>
                     <p className="best-score-text"> Best Score </p>
                     <p className="best-score"> {topScore}/12 </p>
                     <button

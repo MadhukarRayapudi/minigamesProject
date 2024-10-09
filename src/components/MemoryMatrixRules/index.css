@@ -104,11 +104,7 @@
     color: #ffffff;
   }
 
-  .start-md-btn {
-    display: none;
-  }
-
-  .start-sm-btn {
+  .start-game-btn {
     width: Hug (104px) px;
     height: Hug (32px) px;
     padding: 8px 16px 8px 16px;
@@ -228,7 +224,7 @@
     color: #ffffff;
   }
 
-  .start-md-btn {
+  .start-game-btn {
     width: Hug (132px) px;
     height: Hug (48px) px;
     padding: 12px 24px 12px 24px;
@@ -240,9 +236,8 @@
     background: #467aff;
     border: 0;
     margin-top: 36px;
-  }
-
-  .start-sm-btn {
-    display: none;
+    align-self: flex-start;
+    margin-bottom: 12px;
+    margin-top: -22px;
   }
 }

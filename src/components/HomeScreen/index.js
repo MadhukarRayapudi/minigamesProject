@@ -53,7 +53,7 @@ const HomeScreen = () => (
             <img
               className="flip-card-game-image"
               src="https://res.cloudinary.com/dqv0mp6k8/image/upload/v1722492197/animals_z3zmkc.png"
-              alt="card flip"
+              alt="card flip memory game"
             />
           </Link>
         </li>

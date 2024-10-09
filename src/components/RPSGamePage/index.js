@@ -133,8 +133,8 @@ class RPSGamePage extends Component {
               />
             </button>
             <h2 className="game-page-rules-heading">Rules</h2>
-            <ul className="rules-unordered-container">
-              <div className="popup-six-rules-container">
+            <div className="rules-unordered-container">
+              <ul className="popup-six-rules-container">
                 <li className="popup-rules">
                   The game result should be based on user and user opponent
                   choices
@@ -174,9 +174,9 @@ class RPSGamePage extends Component {
                     YOU WON
                   </span>
                 </li>
-              </div>
+              </ul>
 
-              <div className="popup-six-rules-container">
+              <ul className="popup-six-rules-container">
                 <li className="popup-rules">
                   When the user choice is rock and his opponent choice is
                   scissors then the result will be{' '}
@@ -219,8 +219,8 @@ class RPSGamePage extends Component {
                   </span>
                   , then the count of the score should be decremented by 1.
                 </li>
-              </div>
-            </ul>
+              </ul>
+            </div>
           </div>
         </Modal>
         {gameInProgress ? (
