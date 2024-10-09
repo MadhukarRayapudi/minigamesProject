@@ -51,20 +51,25 @@ class RPSGamePage extends Component {
 
   onClickAnOption = async id => {
     const userChoice = choicesList.filter(eachItem => eachItem.id === id)
-    await this.setState({
-      userSelectedOption: id,
-      userSelectedOptionImage: userChoice[0].imageUrl,
-    })
     const num = Math.floor(Math.random() * 3)
-    await this.setState({
-      computerChoice: choicesList[num].id,
-      computerChoiceImage: choicesList[num].imageUrl,
-    })
-    this.gameResult()
+    this.setState(
+      {
+        userSelectedOption: id,
+        userSelectedOptionImage: userChoice[0].imageUrl,
+        computerChoice: choicesList[num].id,
+        computerChoiceImage: choicesList[num].imageUrl,
+      },
+      this.gameResult,
+    )
+
+    // await this.setState({
+    //   computerChoice: choicesList[num].id,
+    //   computerChoiceImage: choicesList[num].imageUrl,
+    // })
   }
   // we can also write the logic inside gameResult function in the onClickOption function, for my convenience i wrote it as a seperate function.
 
-  gameResult = () => {
+  gameResult = async () => {
     const {computerChoice, userSelectedOption} = this.state
 
     if (

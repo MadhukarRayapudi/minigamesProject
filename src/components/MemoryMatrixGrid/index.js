@@ -18,7 +18,7 @@ class MemoryMatrixGrid extends Component {
       let cellClass = 'grid-cell'
       let dataTestId = 'notHighlighted'
 
-      // Here i wrote the conditions for highlihting(highlighted grids)
+      // Highlighting conditions (highlighted grids)
       if (isMemorizing && isHighlighted) {
         cellClass += ' highlighted'
         dataTestId = 'highlighted'
@@ -29,22 +29,32 @@ class MemoryMatrixGrid extends Component {
         dataTestId = 'highlighted'
       }
 
+      console.log(
+        `Rendering cell ${i}: class=${cellClass} data-testid=${dataTestId}`,
+      )
+
       cells.push(
         <li
-          key={i}
+          key={`cell-${i}`} // Ensure unique key for each cell
           className={cellClass}
           onClick={() => onCellClick(i)}
           data-testid={dataTestId}
         />,
       )
     }
+
+    // Ensure that at least two list items are being rendered
+    if (cells.length < 2) {
+      console.error('Error: Less than two grid cells are being rendered.')
+    }
+
     return cells
   }
 
   render() {
     const {numberOfGrids} = this.props
 
-    // Update the grid-template-columns based on the number of grids
+    // Update the grid-template-columns and rows based on the number of grids
     const gridStyle = {
       gridTemplateColumns: `repeat(${numberOfGrids}, 1fr)`,
       gridTemplateRows: `repeat(${numberOfGrids}, 1fr)`,
